@@ -13,4 +13,5 @@ int totient_phi(int n) {
 		}
 		sum += i;
 	}
+	return sum;
 }
