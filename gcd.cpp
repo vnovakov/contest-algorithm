@@ -6,12 +6,9 @@ int gcd(int a, int b) {
 }
 
 int totient_phi(int n) {
-	int sum = 1;
+	int count = 1;
 	for (int i = 2; i < n; i++) {
-		if (gcd(i, n) != 1) {
-			continue;
-		}
-		sum += i;
+		count += gcd(i, n) == 1;
 	}
-	return sum;
+	return count;
 }
